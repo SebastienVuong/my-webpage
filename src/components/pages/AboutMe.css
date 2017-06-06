@@ -1,0 +1,33 @@
+/*div {*/
+/*    border-style: solid;*/
+/*    border-color: red;*/
+/*}*/
+
+.about-me-body {
+    display: flex;
+}
+
+.nav-bar {
+    width : 32.47vw;
+    height : 400px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-button {
+    border-color: gray;
+    border-style: solid;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: lightgray;
+    opacity: 0.80;
+}
+
+.main-content {
+    background-color: lightgray;
+    width: 52.53vw;
+}

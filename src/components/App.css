@@ -1,0 +1,106 @@
+/*div {*/
+/*    border-style: solid;*/
+/*    border-color: red;*/
+/*}*/
+
+.top-menu {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.profile {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 20.07vw;    
+    width: 32.47vw;
+}
+
+.profile-picture-box {
+    height: 100%;
+    width: 20.07vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+    height: 95%;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px silver;
+    z-index: 50;
+}
+
+.profile-links {
+    width: 12.40vw;
+}
+
+.linkedin-link, .github-link {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa {
+    color: purple;
+}
+
+.App-bar {
+    width: 52.53vw;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main-buttons {
+    display : flex;
+    align-items: center;
+}
+
+.Main-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-button {
+    text-decoration: none;
+    color: silver;
+    font-size: 30px;
+}
+
+.Main-button-text {
+    z-index: 2;
+    position: relative;
+    top: 70px;
+}
+
+.hex-button {
+    /*margin-right: 100px;*/
+	width: 200px;
+	height: 173.2px;
+	text-align: center;
+	position: relative;
+}
+.hex-button:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-bottom: 86.6px solid rgba(55,55,55,0.8);
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	width: 100px;
+	height: 0;
+}
+.hex-button:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: 86.6px solid rgba(55,55,55,0.8);
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	width: 100px;
+	height: 0;
+}
