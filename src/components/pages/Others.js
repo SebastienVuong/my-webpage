@@ -7,9 +7,13 @@ class Others extends Component {
 
   // }
 
-  // render() {
- 
-  // }
+    render() {
+        return (
+            <div>
+                Others
+            </div>
+        );
+    }
 }
 
 export default Others;

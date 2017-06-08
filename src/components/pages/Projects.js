@@ -3,13 +3,17 @@ import React, { Component } from 'react';
 import './Projects.css';
 
 class Projects extends Component {
-  // constructor() {
-
-  // }
-
-  // render() {
- 
-  // }
+    // constructor() {
+    
+    // }
+    
+    render() {
+        return (
+            <div>
+                Projects
+            </div>
+        );
+    }
 }
 
 export default Projects;

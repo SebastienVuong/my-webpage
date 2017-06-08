@@ -7,8 +7,12 @@ export default class Contact extends Component {
 
   // }
 
-  // render() {
- 
-  // }
+    render() {
+        return (
+            <div>
+                Contact
+            </div>
+        );
+    }
 }
 
