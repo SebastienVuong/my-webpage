@@ -32,12 +32,12 @@ class App extends Component {
                         </Link>
                     </div>
                     <div className="profile-links">
-                        <a href='https://www.linkedin.com/in/sebastienvuong/'>
+                        <a href='https://www.linkedin.com/in/sebastienvuong/' target="_blank">
                             <div className="linkedin-link hex-button">
                                 <i className="fa fa-linkedin-square" aria-hidden="true"></i>
                             </div>
                         </a>
-                        <a href='https://github.com/SebastienVuong'>
+                        <a href='https://github.com/SebastienVuong' target="_blank">
                             <div className="github-link hex-button">
                                 <i className="fa fa-github-square" aria-hidden="true"></i>
                             </div>

@@ -25,67 +25,73 @@ class AboutMe extends Component {
                     </button>
                 </div>
                 <div className="main-content gradientback">
-                    <p>
+                    <div>
                         Quomodo cecidisti de caelo Lucifer, qui mane oriebaris? Corruisti in terram, qui vulnerabas gentes?
-                    </p>
+                    </div>
                     <div className="content-section">
-                        <p className="section-title">
-                            PHILOSOPHY
-                        </p>
-                        <p className="section-entry">
+                        <div className="section-title">
+                            ## PHILOSOPHY
+                        </div>
+                        <div className="section-entry">
                             In coding, just like in life, we should not limit ourselves to what we know we can do. 
                             Instead, we should dream of how we want it to be. From that point, we can start to look for the means to achieve that ideal vision.
-                        </p>
-                        <p className="section-title">
-                            EDUCATION
-                        </p>
-                        <p className="section-entry">
+                        </div>
+                        <div className="section-title">
+                            ## EDUCATION
+                        </div>
+                        <div className="section-entry">
                             DecodeMTL : April 2017 - May 2017 <br/>
-                            Web Development Immersive
-                        </p>
-                        <p className="section-entry">
+                            <span className="entry-description"> 
+                                <pre>&#9; Full-Stack Web Development Course</pre> 
+                            </span>
+                        </div>
+                        <div className="section-entry">
                             École Polytechnique : August 2009 - April 2015 <br/>
-                            Mechanical Engineering Baccalaureate (as student-athlete)
-                        </p>
+                            <span className="entry-description"> 
+                                <pre>&#9; B.Eng in Mechanical Engineering, Analysis & Design orientation (as student-athlete)</pre> 
+                            </span>
+                        </div>
                     </div>
                     <div className="content-section">
-                        <p className="section-title">
-                            PAST EXPERIENCE
-                        </p>
-                        <p className="section-entry">
-                            DecodeMTL : April 2017 - May 2017 <br/>
-                            Full-Stack Web Development Immersive
-                        </p>
-                        <p className="section-entry">
+                        <div className="section-title">
+                            ## PAST EXPERIENCE
+                        </div>
+                        <div className="section-entry">
+                            Dialogue Technologies – Clinic Management System
+                            <span className="entry-description"> 
+                                <pre>&#9; Full-Stack project consisting in an app for patients to book appointments with specialists</pre>
+                            </span>
+                        </div>
+                        <div className="section-entry">
                             École Polytechnique : August 2009 - April 2015 <br/>
                             Mechanical Engineering Baccalaureate (as student-athlete)
-                        </p>
+                        </div>
                     </div>
                     <div className="content-section">
-                        <p className="section-title">
-                            PAST EXPERIENCE
-                        </p>
-                        <p className="section-entry">
+                        <div className="section-title">
+                            ## PAST EXPERIENCE
+                        </div>
+                        <div className="section-entry">
                             DecodeMTL : April 2017 - May 2017 <br/>
                             Full-Stack Web Development Immersive
-                        </p>
-                        <p className="section-entry">
+                        </div>
+                        <div className="section-entry">
                             École Polytechnique : August 2009 - April 2015 <br/>
                             Mechanical Engineering Baccalaureate (as student-athlete)
-                        </p>
+                        </div>
                     </div>
                     <div className="content-section">
-                        <p className="section-title">
-                            PAST EXPERIENCE
-                        </p>
-                        <p className="section-entry">
+                        <div className="section-title">
+                            ## PAST EXPERIENCE
+                        </div>
+                        <div className="section-entry">
                             DecodeMTL : April 2017 - May 2017 <br/>
                             Full-Stack Web Development Immersive
-                        </p>
-                        <p className="section-entry">
+                        </div>
+                        <div className="section-entry">
                             École Polytechnique : August 2009 - April 2015 <br/>
                             Mechanical Engineering Baccalaureate (as student-athlete)
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
