@@ -3,26 +3,40 @@ import React, { Component } from 'react';
 import './AboutMe.css';
 
 class AboutMe extends Component {
-    // constructor(props) {
-    //     super(props);
+    
+    // constructor() {
+    //     super();
     // }
+    
+    componentDidMount = () => {
+        this.props.onHomepage(false);
+    }
+    
+    componentWillUnmount = () => {
+        this.props.onHomepage(true);
+    }
 
     render() {
         return (
             <div className="about-me-body">
-                <div className="nav-bar">
-                    <button className="nav-button">
-                        My philosophy
-                    </button>
-                    <button className="nav-button">
-                        Education
-                    </button>
-                    <button className="nav-button">
-                        Past experience
-                    </button>
-                    <button className="nav-button">
-                        Projects and awards
-                    </button>
+                <div className="nav-bar-container">
+                    <div className="nav-bar">
+                        <button className="nav-button">
+                            My philosophy
+                        </button>
+                        <button className="nav-button">
+                            Education
+                        </button>
+                        <button className="nav-button">
+                            Past experience
+                        </button>
+                        <button className="nav-button">
+                            Other work exprerience
+                        </button>
+                        <button className="nav-button">
+                            Projects and awards
+                        </button>
+                    </div>
                 </div>
                 <div className="main-content gradientback">
                     <div>

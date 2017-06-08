@@ -1,5 +1,7 @@
 body {
     background-image: url('http://i.imgur.com/xsKmyIU.jpg');
+    background-repeat: no-repeat;
+    /*background-position: center center;*/
     background-size: cover;
     margin: 0;
     padding-left: 4vw;
@@ -8,6 +10,7 @@ body {
 }
 
 .overlay {
+    position: fixed;
     z-index: -10;
     min-height: 100vh;
     margin-left: -4vw;
@@ -21,10 +24,8 @@ body {
 
 #root {
     z-index: 0;
-    position: absolute;
+    /*position: absolute;*/
     padding-top: 2vw;
-    padding-left: 4vw;
-    padding-right: 10vw;
-    top: 0;
-    left: 0;
+    /*top: 0;*/
+    /*left: 0;*/
 }

@@ -14,7 +14,7 @@ polygon {
 }
 
 polygon:hover {
-    stroke: chartreuse;
+    stroke: lightyellow;
     stroke-width: 2;
     opacity: 0.4;
 }
@@ -23,8 +23,7 @@ polygon:hover {
     height: 0;
     margin: 0;
     font-size: 4vw;
-    color: chartreuse;
-    /*display: none;*/
+    color: lightyellow;
     position: relative;
     bottom: 13vw;
     left: 5vw;
@@ -66,6 +65,7 @@ polygon:hover {
 }
 
 .profile-links {
+    padding-right: 3vw;
     width: 12.40vw;
     display: flex;
     flex-direction: column;
@@ -95,10 +95,27 @@ i {
 }
 
 .App-bar {
+    margin-left: -3vw;
     width: 52.53vw;   
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    animation-name: App-bar-slide;
+    animation-duration: 2s;
+}
+
+@keyframes App-bar-slide {
+    0% {
+        margin-top:-50vw;
+    }
+    
+    30% {
+        margin-top:-50vw;
+    }
+    
+    100% {
+        
+    }
 }
 
 .Main-buttons {
@@ -114,7 +131,7 @@ i {
 
 .top-button {
     text-decoration: none;
-    color: chartreuse;
+    color: lightyellow;
     font-size: 1.75vw;
     opacity: 0.3;
 }
