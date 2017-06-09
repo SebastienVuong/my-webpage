@@ -1,12 +1,16 @@
 body {
     background-image: url('http://i.imgur.com/xsKmyIU.jpg');
     background-repeat: no-repeat;
+    min-height: 100vh;
     /*background-position: center center;*/
     background-size: cover;
     margin: 0;
     padding-left: 4vw;
     padding-right: 10vw;
     font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
 
 .overlay {
@@ -20,6 +24,11 @@ body {
     height: 100%;
     background-color: white;
     opacity: 0.4;
+}
+
+.fb-like {
+    padding: 2vw;
+    padding-top: 4vw;
 }
 
 #root {

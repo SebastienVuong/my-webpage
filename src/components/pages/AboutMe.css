@@ -38,7 +38,7 @@
     animation-name: button-slide;
     animation-duration: 3s;
     animation-timing-function: ease-in-and-out;
-    width: 20vw;
+    width: 24vw;
     font-size: 1.5vw;
     z-index: -1;
 }
@@ -46,14 +46,14 @@
 @keyframes button-slide {
   0% {
     width: 12vw;
-    font-size: 0.8vw;
+    font-size: 0.6vw;
   }
   50% {
     width: 12vw;
-    font-size: 0.8vw;
+    font-size: 0.66vw;
   }
   100% {
-    width: 20vw;
+    width: 24vw;
     font-size: 1.5vw;
   }
 }

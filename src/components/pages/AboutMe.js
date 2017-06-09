@@ -31,7 +31,7 @@ class AboutMe extends Component {
                             Past experience
                         </button>
                         <button className="nav-button">
-                            Other work exprerience
+                            Other professional experience
                         </button>
                         <button className="nav-button">
                             Projects and awards
