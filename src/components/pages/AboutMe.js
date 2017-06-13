@@ -45,10 +45,10 @@ class AboutMe extends Component {
                     <div className="content-section">
                         <div className="section-title">
                             ## PHILOSOPHY
-                        </div>
-                        <div className="section-entry">
-                            In coding, just like in life, we should not limit ourselves to what we know we can do. 
-                            Instead, we should dream of how we want it to be. From that point, we can start to look for the means to achieve that ideal vision.
+                            <div className="section-entry">
+                                In coding, just like in life, we should not limit ourselves to what we know we can do. 
+                                Instead, we should dreaam of how we want it to be. From that point, we can start to look for the means to achieve that ideal vision.
+                            </div>
                         </div>
                         <div className="section-title">
                             ## EDUCATION
@@ -56,13 +56,13 @@ class AboutMe extends Component {
                         <div className="section-entry">
                             DecodeMTL : April 2017 - May 2017 <br/>
                             <span className="entry-description"> 
-                                <pre>&#9; Full-Stack Web Development Course</pre> 
+                                <pre>Full-Stack Web Development Course</pre> 
                             </span>
                         </div>
                         <div className="section-entry">
                             École Polytechnique : August 2009 - April 2015 <br/>
                             <span className="entry-description"> 
-                                <pre>&#9; B.Eng in Mechanical Engineering, Analysis & Design orientation (as student-athlete)</pre> 
+                                <pre>B.Eng in Mechanical Engineering, Analysis & Design orientation (as student-athlete)</pre> 
                             </span>
                         </div>
                     </div>
@@ -73,7 +73,7 @@ class AboutMe extends Component {
                         <div className="section-entry">
                             Dialogue Technologies – Clinic Management System
                             <span className="entry-description"> 
-                                <pre>&#9; Full-Stack project consisting in an app for patients to book appointments with specialists</pre>
+                                <pre>Full-Stack project consisting in an app for patients to book appointments with specialists</pre>
                             </span>
                         </div>
                         <div className="section-entry">
