@@ -75,7 +75,7 @@
     padding: 1vw;
     height: 50.53vw;
     width: 50.53vw;
-    overflow-y: hidden;
+    overflow-y: scroll;
     position: absolute;
     left: 36.47vw;
     background: dimgray;
@@ -84,15 +84,39 @@
 
 .section-title {
     color: darkorange;
+    font-weight: bolder;
+    /*text-indent: -0.5vw;*/
 }
 
 .section-entry {
     color: lightyellow;
+    font-weight: normal;
+    padding-left: 1vw;
+}
+
+.entry-title {
+    text-decoration: underline;
+}
+
+.entry-description {
+    text-decoration: none;
 }
 
 pre {
+    margin: 0;
+    padding-top: 0.5vw;
     color: lightblue;
     white-space: pre-wrap;
+    /*text-indent: 1vw;*/
+}
+
+ul {
+    margin-top: 0.5vw;
+    margin-bottom: 1vw;
+}
+
+.entry-task {
+    font-size: 0.8em;
 }
 
 .gradientbackobs{
