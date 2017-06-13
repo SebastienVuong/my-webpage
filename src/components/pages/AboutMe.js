@@ -20,20 +20,26 @@ class AboutMe extends Component {
         let content = [];
         content.push({
             title: "My philosophy",
-            entries: [{
-               title: "In coding, just like in life, we should not limit ourselves to what we know we can do. Instead, we should dreaam of how we want it to be. From that point, we can start to look for the means to achieve that ideal vision." 
-            }],
+            entries: [
+                {
+                    title: "Coding and living your life should have this similarity: ",
+                    subtitle: "We should not limit ourselves to what we know we can do. Instead, we should dream of how we want it to be. From that point, we can start to look for the means to achieve that ideal vision.",
+                    tasks: []
+                }
+            ]
         });
         content.push({
             title: "Education",
             entries: [
                 {
                     title: "DecodeMTL [Apr 2017 - Jun 2017]",
-                    subtitle: "Full-Stack Web Development Course"
+                    subtitle: "Full-Stack Web Development Course",
+                    tasks: []
                 },
                 {
                     title: "École Polytechnique [Aug 2009 - Apr 2015]",
-                    subtitle: "B.Eng in Mechanical Engineering, Analysis & Design orientation (as student-athlete)"        
+                    subtitle: "B.Eng in Mechanical Engineering, Analysis & Design orientation (as student-athlete)",
+                    tasks: []
                 }
             ]
         });
@@ -65,7 +71,7 @@ class AboutMe extends Component {
             title: "Other Professional Experience",
             entries: [
                 {
-                    title: "Merveille Orient [Jul 2007 - Aug 2010",
+                    title: "Merveille Orient [Jul 2007 - Aug 2010]",
                     subtitle: "Sales Clerk",
                     tasks: [
                             "Sales Clerk",
@@ -133,11 +139,51 @@ class AboutMe extends Component {
                 },
                 {
                     title: "Dragon Boat Racing",
-                    subtitle: "Medals at competitions ranging from regional regattas to World Cup"
+                    subtitle: "Medals at competitions ranging from regional regattas to World Cup",
+                    tasks: []
                 }
             ]
         })
         console.log(content);
+        return (
+            <div className="about-me-body">
+                <div className="nav-bar-container">
+                    <div className="nav-bar">
+                        {content.map(section=>
+                            <button key={section.title} className="nav-button">
+                                {section.title}
+                            </button>
+                        )}
+                    </div>
+                </div>
+                <div className="main-content gradientback">
+                    <div className="content-section">
+                        {content.map(section=>
+                            <div key={section.title} className="section-title">
+                                {section.title.toUpperCase()}
+                                {section.entries.map(entry=>
+                                    <div key={entry.title} className="section-entry">
+                                        <span className="entry-title">{entry.title}</span>
+                                        <span className="entry-description">
+                                            <pre>{entry.subtitle}</pre>
+                                        </span>
+                                        <ul>
+                                        {entry.tasks.map(task=>
+                                            <li key={task} className="entry-task">
+                                                {task}
+                                            </li>
+                                        )}
+                                        </ul>
+                                        <hr/>
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        );
+        /*
         return (
             <div className="about-me-body">
                 <div className="nav-bar-container">
@@ -231,6 +277,7 @@ class AboutMe extends Component {
                 </div>
             </div>
         );
+        */
     }
 }
 
