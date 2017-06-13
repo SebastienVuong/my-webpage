@@ -17,6 +17,127 @@ class AboutMe extends Component {
     }
 
     render() {
+        let content = [];
+        content.push({
+            title: "My philosophy",
+            entries: [{
+               title: "In coding, just like in life, we should not limit ourselves to what we know we can do. Instead, we should dreaam of how we want it to be. From that point, we can start to look for the means to achieve that ideal vision." 
+            }],
+        });
+        content.push({
+            title: "Education",
+            entries: [
+                {
+                    title: "DecodeMTL [Apr 2017 - Jun 2017]",
+                    subtitle: "Full-Stack Web Development Course"
+                },
+                {
+                    title: "École Polytechnique [Aug 2009 - Apr 2015]",
+                    subtitle: "B.Eng in Mechanical Engineering, Analysis & Design orientation (as student-athlete)"        
+                }
+            ]
+        });
+        content.push({
+            title: "Past Experience",
+            entries: [
+                {
+                    title: "Dialogue Technologies - Clinic Management System [May 2017]",
+                    subtitle: "Full-Stack project consisting in an app for patients to book appointments with specialists",
+                    tasks: [
+                            "Built back-end using Node/Express. Integrated When I Work's API to retrieve specialists' availabilities and MySQL to store patients' bookings",
+                            "Built front-end using React",
+                            "Integration of Mailgun for email sending, Auth0 for authentification and MomentJS for time conversion and formatting",
+                            "Deployment using Heroku for the back-end and Netlify for the front-end"
+                        ]
+                },
+                {
+                    title: "Pediatric Rehabilitation Engineering Chair [May 2014 - Dec 2014]",
+                    subtitle: "Gait Analysis Data Processing",
+                    tasks: [
+                           "Worked on an innovative way to estimate forces from a single foot based on the total force of both feet",
+                           "Built a program with MatLab to retrieve experimental data from an Excel sheet and process it",
+                           "Engineered a process to compute and optimize parameters to minimize experimental error rates"
+                        ]
+                }
+            ]
+        });
+        content.push({
+            title: "Other Professional Experience",
+            entries: [
+                {
+                    title: "Merveille Orient [Jul 2007 - Aug 2010",
+                    subtitle: "Sales Clerk",
+                    tasks: [
+                            "Sales Clerk",
+                            "Cashier"
+                        ]
+                },
+                {
+                    title: "G Production Inc [Jul 2012 - Aug 2012]",
+                    subtitle: "Project Engineering Intern",
+                    tasks: [
+                            "Work Coordination",
+                            "Information Resources",
+                            "Project Monitoring"
+                        ]
+                },
+                {
+                    title: "Team Canada [World Cup 2016]",
+                    subtitle: "(Chinese Business Visa valid until October 2025",
+                    tasks: [
+                            "1 silver medal, 2 bronze medals",
+                            "Ranked 3rd overall"
+                        ]
+                },
+                {
+                    title: "Canal Fitness [Apr 2016 - May 2017]",
+                    subtitle: "Gym Receptionist",
+                    tasks: [
+                            "Manage registrations and memberships",
+                            "Assist clients in their training"
+                        ]
+                },
+                {
+                    title: "22Dragons [Jun 2016 - Present]",
+                    subtitle: "Coach",
+                    tasks: [
+                            "Contractual coach for events and training camps",
+                            "Manage and coach club teams",
+                            "Coach individual athletes"
+                        ]
+                },
+                {
+                    title: "Talis Crew [Jul 2016 - Present]",
+                    subtitle: "Model and Brand Ambassador",
+                    tasks: [
+                            "Model and brand ambassasor - Represent the clothing line in Montreal, organize sales and orders",
+                            "Business development - Actively seek to add value to the business and improve visibility by approaching potential clients and represent the clothing line at provincial, national and international competitions"
+                        ]
+                }
+            ]
+        });
+        content.push({
+            title: "Projects & Awards",
+            entries: [
+                {
+                    title: "Collaborative Private Jet Cabin Design [Sep 2014 - Apr 2015]",
+                    subtitle: "Capstone project in partnership with Bombardier Aerospace",
+                    tasks: [
+                        "Business Jet Cabin Design for 2025 in a multidisciplinary team: engineering, industrial design and administration students"
+                        ]
+                },
+                {
+                    title: "Math & Physics competitions",
+                    subtitle: "Certificates, prizes and medals at regional, provincial and national competitions",
+                    tasks: []
+                },
+                {
+                    title: "Dragon Boat Racing",
+                    subtitle: "Medals at competitions ranging from regional regattas to World Cup"
+                }
+            ]
+        })
+        console.log(content);
         return (
             <div className="about-me-body">
                 <div className="nav-bar-container">
