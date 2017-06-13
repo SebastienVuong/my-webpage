@@ -7,7 +7,7 @@ class AboutMe extends Component {
     constructor() {
         super();
         this.state = {
-            currentSection: 0
+            currentSection: -5
         }
     }
     
@@ -99,7 +99,7 @@ class AboutMe extends Component {
                 },
                 {
                     title: "Team Canada [World Cup 2016]",
-                    subtitle: "(Chinese Business Visa valid until October 2025",
+                    subtitle: "(Chinese Business Visa valid until October 2025)",
                     tasks: [
                             "1 silver medal, 2 bronze medals",
                             "Ranked 3rd overall"
@@ -173,6 +173,82 @@ class AboutMe extends Component {
                 </div>
                 <div ref="content" className="main-content gradientback">
                     <div className="content-section">
+                        {this.state.currentSection > 0 ? 
+                            (<div>
+                                <span style={{color: 'gray', 'fontWeight': 'bold', 'marginLeft': '1vw'}}> [...] </span>
+                                <div className="pre-content-section">
+                                    <div className="section-title pre-content">
+                                        {content[this.state.currentSection - 1].title.toUpperCase()}
+                                        {content[this.state.currentSection - 1].entries.map(entry=>
+                                            (<div key={entry.title} className="section-entry pre-content">
+                                                <span className="entry-title pre-content">{entry.title}</span>
+                                                <span className="entry-description pre-content">
+                                                    <pre className="pre-content">{entry.subtitle}</pre>
+                                                </span>
+                                                <ul>
+                                                {entry.tasks.map(task=>
+                                                    (<li key={task} className="entry-task">
+                                                        {task}
+                                                    </li>)
+                                                )}
+                                                </ul>
+                                                <hr/>
+                                            </div>)
+                                        )}
+                                    </div>
+                                </div>
+                            </div>)
+                            : (<div className="pre-content-section"></div>)}
+                        {this.state.currentSection >= 0 ? 
+                            (<div className="content">
+                                <div className="section-title">
+                                    {content[this.state.currentSection].title.toUpperCase()}
+                                    {content[this.state.currentSection].entries.map(entry=>
+                                        (<div key={entry.title} className="section-entry">
+                                            <span className="entry-title">{entry.title}</span>
+                                            <span className="entry-description">
+                                                <pre>{entry.subtitle}</pre>
+                                            </span>
+                                            <ul>
+                                            {entry.tasks.map(task=>
+                                                (<li key={task} className="entry-task">
+                                                    {task}
+                                                </li>)
+                                            )}
+                                            </ul>
+                                            <hr/>
+                                        </div>)
+                                    )}
+                                </div>
+                            </div>)
+                            : null}
+                        {this.state.currentSection >= 0 && this.state.currentSection < content.length - 1 ? 
+                            (<div>
+                                <div className="post-content-section">
+                                    <div className="section-title post-content">
+                                        {content[this.state.currentSection + 1].title.toUpperCase()}
+                                        {content[this.state.currentSection + 1].entries.map(entry=>
+                                            (<div key={entry.title} className="section-entry post-content">
+                                                <span className="entry-title post-content">{entry.title}</span>
+                                                <span className="entry-description post-content">
+                                                    <pre className="post-content">{entry.subtitle}</pre>
+                                                </span>
+                                                <ul>
+                                                {entry.tasks.map(task=>
+                                                    (<li key={task} className="entry-task">
+                                                        {task}
+                                                    </li>)
+                                                )}
+                                                </ul>
+                                                <hr/>
+                                            </div>)
+                                        )}
+                                    </div>
+                                </div>
+                                <span style={{color: 'gray', 'fontWeight': 'bold', 'marginLeft': '1vw'}}> [...] </span>
+                            </div>)
+                            : (<div className="post-content-section"></div>)}
+                        {/*
                         {content.map(section=>
                             (<div key={section.title} className="section-title">
                                 {section.title.toUpperCase()}
@@ -194,6 +270,7 @@ class AboutMe extends Component {
                                 )}
                             </div>)
                         )}
+                        */}
                     </div>
                 </div>
             </div>
