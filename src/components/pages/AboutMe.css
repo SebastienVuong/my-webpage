@@ -75,7 +75,7 @@
     padding: 1vw;
     height: 50.53vw;
     width: 50.53vw;
-    overflow-y: scroll;
+    overflow-y: auto;
     position: absolute;
     left: 36.47vw;
     background: dimgray;
@@ -83,31 +83,50 @@
 }
 
 .section-title {
-    color: darkblue;
+    color: skyblue;
+    font-weight: bold;
 }
 
 .section-entry {
     color: lightyellow;
+    font-weight: normal;
+    padding-left: 1vw;
 }
 
 .pre-content-section {
-    height: 8vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow-y: hidden;
+    /*height: 8vw;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: flex-end;*/
+    /*overflow-y: hidden;*/
 }    
 
 .post-content-section {
-    height: 8vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow-y: hidden;
+    /*height: 8vw;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: flex-start;*/
+    /*overflow-y: hidden;*/
 }    
 
 .pre-content, .post-content {
-    color: darkgray;
+    color: skyblue;
+}
+
+.section-extension {
+    border-color: skyblue;
+    border-width: medium;
+    color: lightyellow;
+    /*font-weight: bold;*/
+    background-color: gray;
+    opacity: 0.5;
+    margin-left: 2vw;
+    margin-top: 0.5vw;
+    margin-bottom: 1vw;
+    border-radius: 0.5vw;
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+    padding-bottom: 0.2vw;
 }
 
 pre {
