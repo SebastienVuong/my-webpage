@@ -174,29 +174,18 @@ class AboutMe extends Component {
                 <div ref="content" className="main-content gradientback">
                     <div className="content-section">
                         {this.state.currentSection > 0 ? 
-                            (<div>
-                                <span style={{color: 'gray', 'fontWeight': 'bold', 'marginLeft': '1vw'}}> [...] </span>
-                                <div className="pre-content-section">
-                                    <div className="section-title pre-content">
-                                        {content[this.state.currentSection - 1].title.toUpperCase()}
-                                        {content[this.state.currentSection - 1].entries.map(entry=>
-                                            (<div key={entry.title} className="section-entry pre-content">
-                                                <span className="entry-title pre-content">{entry.title}</span>
-                                                <span className="entry-description pre-content">
-                                                    <pre className="pre-content">{entry.subtitle}</pre>
-                                                </span>
-                                                <ul>
-                                                {entry.tasks.map(task=>
-                                                    (<li key={task} className="entry-task">
-                                                        {task}
-                                                    </li>)
-                                                )}
-                                                </ul>
-                                                <hr/>
-                                            </div>)
-                                        )}
-                                    </div>
-                                </div>
+                            (<div className="pre-content-section">
+                                {content.slice(0,this.state.currentSection).map((section,idx)=>
+                                    (<div className="section-title pre-content">            
+                                        {section.title.toUpperCase()}
+                                        <br/>
+                                        <button 
+                                            className="section-extension"
+                                            onClick={that._handleClick.bind(this,idx)}
+                                        > [...] </button>
+                                        <hr/>
+                                    </div>)
+                                )}
                             </div>)
                             : (<div className="pre-content-section"></div>)}
                         {this.state.currentSection >= 0 ? 
@@ -223,54 +212,37 @@ class AboutMe extends Component {
                             </div>)
                             : null}
                         {this.state.currentSection >= 0 && this.state.currentSection < content.length - 1 ? 
-                            (<div>
-                                <div className="post-content-section">
-                                    <div className="section-title post-content">
-                                        {content[this.state.currentSection + 1].title.toUpperCase()}
-                                        {content[this.state.currentSection + 1].entries.map(entry=>
-                                            (<div key={entry.title} className="section-entry post-content">
-                                                <span className="entry-title post-content">{entry.title}</span>
-                                                <span className="entry-description post-content">
-                                                    <pre className="post-content">{entry.subtitle}</pre>
-                                                </span>
-                                                <ul>
-                                                {entry.tasks.map(task=>
-                                                    (<li key={task} className="entry-task">
-                                                        {task}
-                                                    </li>)
-                                                )}
-                                                </ul>
-                                                <hr/>
-                                            </div>)
-                                        )}
-                                    </div>
-                                </div>
-                                <span style={{color: 'gray', 'fontWeight': 'bold', 'marginLeft': '1vw'}}> [...] </span>
-                            </div>)
-                            : (<div className="post-content-section"></div>)}
-                        {/*
-                        {content.map(section=>
-                            (<div key={section.title} className="section-title">
-                                {section.title.toUpperCase()}
-                                {section.entries.map(entry=>
-                                    (<div key={entry.title} className="section-entry">
-                                        <span className="entry-title">{entry.title}</span>
-                                        <span className="entry-description">
-                                            <pre>{entry.subtitle}</pre>
-                                        </span>
-                                        <ul>
-                                        {entry.tasks.map(task=>
-                                            (<li key={task} className="entry-task">
-                                                {task}
-                                            </li>)
-                                        )}
-                                        </ul>
+                             (<div className="post-content-section">
+                                <br/>
+                                {content.slice(this.state.currentSection+1,content.length).map((section,idx)=>
+                                    (<div className="section-title post-content">            
+                                        {section.title.toUpperCase()}
+                                        <br/>
+                                        <button 
+                                            className="section-extension"
+                                            onClick={that._handleClick.bind(this,idx+this.state.currentSection+1)}
+                                        > [...] </button>
                                         <hr/>
                                     </div>)
                                 )}
                             </div>)
-                        )}
-                        */}
+                            : (<div className="post-content-section"></div>)}
+                        {this.state.currentSection === -5 ? 
+                             (<div className="collapsed-content-section">
+                                <br/>
+                                {content.map((section,idx)=>
+                                    (<div className="section-title collapsed-content">            
+                                        {section.title.toUpperCase()}
+                                        <br/>
+                                        <button 
+                                            className="section-extension"
+                                            onClick={that._handleClick.bind(this,idx)}
+                                        > [...] </button>
+                                        <hr/>
+                                    </div>)
+                                )}
+                            </div>)
+                            : (<div className="post-content-section"></div>)}
                     </div>
                 </div>
             </div>
