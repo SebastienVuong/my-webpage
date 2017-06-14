@@ -153,11 +153,11 @@ class AboutMe extends Component {
                     tasks: []
                 }
             ]
-        })
+        });
         // console.log(content);
         var that = this;
         return (
-            <div className="about-me-body">
+            <div className="content-body">
                 <div className="nav-bar-container">
                     <div className="nav-bar">
                         {content.map((section,idx)=>
@@ -176,13 +176,13 @@ class AboutMe extends Component {
                         {this.state.currentSection > 0 ? 
                             (<div className="pre-content-section">
                                 {content.slice(0,this.state.currentSection).map((section,idx)=>
-                                    (<div className="section-title pre-content">            
+                                    (<div className="section-title pre-content link-title" onClick={that._handleClick.bind(this,idx)}>            
                                         {section.title.toUpperCase()}
                                         <br/>
-                                        <button 
+                                        {/*<button 
                                             className="section-extension"
                                             onClick={that._handleClick.bind(this,idx)}
-                                        > [...] </button>
+                                        > [...] </button>*/}
                                         <hr/>
                                     </div>)
                                 )}
@@ -213,15 +213,14 @@ class AboutMe extends Component {
                             : null}
                         {this.state.currentSection >= 0 && this.state.currentSection < content.length - 1 ? 
                              (<div className="post-content-section">
-                                <br/>
                                 {content.slice(this.state.currentSection+1,content.length).map((section,idx)=>
-                                    (<div className="section-title post-content">            
+                                    (<div className="section-title post-content link-title" onClick={that._handleClick.bind(this,idx+this.state.currentSection+1)}>            
                                         {section.title.toUpperCase()}
                                         <br/>
-                                        <button 
+                                        {/*<button 
                                             className="section-extension"
                                             onClick={that._handleClick.bind(this,idx+this.state.currentSection+1)}
-                                        > [...] </button>
+                                        > [...] </button>*/}
                                         <hr/>
                                     </div>)
                                 )}
@@ -231,13 +230,13 @@ class AboutMe extends Component {
                              (<div className="collapsed-content-section">
                                 <br/>
                                 {content.map((section,idx)=>
-                                    (<div className="section-title collapsed-content">            
+                                    (<div key={section.tiitle} className="section-title collapsed-content link-title" onClick={that._handleClick.bind(this,idx)}>            
                                         {section.title.toUpperCase()}
                                         <br/>
-                                        <button 
+                                        {/*<button 
                                             className="section-extension"
                                             onClick={that._handleClick.bind(this,idx)}
-                                        > [...] </button>
+                                        > [...] </button>*/}
                                         <hr/>
                                     </div>)
                                 )}

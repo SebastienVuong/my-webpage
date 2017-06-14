@@ -3,7 +3,7 @@
 /*    border-color: red;*/
 /*}*/
 
-.about-me-body {
+.content-body {
     display: flex;
     width: 85vw;
 }
@@ -30,7 +30,7 @@
     border-style: solid;
     padding: 15px;
     text-align: center;
-    border-radius: 8px;
+    /*border-radius: 8px;*/
     background-color: dimgray;
     color: lightyellow;
     opacity: 0.80;
@@ -80,17 +80,24 @@
     left: 36.47vw;
     background: dimgray;
     opacity: 0.9;
+    border-right: 30px;
+}
+
+.link-title {
+    cursor: pointer;
 }
 
 .section-title {
     color: skyblue;
     font-weight: bold;
+    font-size: 1.5vw;
 }
 
 .section-entry {
     color: lightyellow;
-    font-weight: normal;
+    font-weight: lighter;
     padding-left: 1vw;
+    font-size: 1.25vw;
 }
 
 .pre-content-section {
@@ -109,8 +116,9 @@
     /*overflow-y: hidden;*/
 }    
 
-.pre-content, .post-content {
-    color: skyblue;
+.pre-content, .post-content, .collapsed-content {
+    color: lightsteelblue;
+    /*font-size: 0.8vw;*/
 }
 
 .section-extension {
@@ -123,22 +131,29 @@
     margin-left: 2vw;
     margin-top: 0.5vw;
     margin-bottom: 1vw;
-    border-radius: 0.5vw;
+    /*border-radius: 0.5vw;*/
     padding-left: 0.3vw;
     padding-right: 0.3vw;
     padding-bottom: 0.2vw;
 }
 
 pre {
-    color: lightblue;
+    color: paleturquoise;
     white-space: pre-wrap;
     margin-top: 0vw;
     margin-bottom: 0;
+    font-size: 1.1vw;
 }
 
 ul {
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
+}
+
+hr {
+    border-color: lightyellow; /* Chrome, Safari */
+    background-color: lightyellow; /* Firefox, Opera */
+    color: lightyellow; /* IE */
 }
 
 
@@ -156,4 +171,8 @@ ul {
 
 .entry-description {
     font-style: italic;
+}
+
+.entry-task {
+    font-size: 1.1vw;
 }
