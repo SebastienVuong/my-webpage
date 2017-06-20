@@ -12,7 +12,6 @@ class AboutMe extends Component {
     }
     
     _handleClick = (buttonIdx) => {
-        console.log("clicked", buttonIdx)
         this.setState({
             currentSection: buttonIdx
         })
@@ -154,7 +153,6 @@ class AboutMe extends Component {
                 }
             ]
         });
-        // console.log(content);
         var that = this;
         return (
             <div className="content-body">
@@ -176,7 +174,7 @@ class AboutMe extends Component {
                         {this.state.currentSection > 0 ? 
                             (<div className="pre-content-section">
                                 {content.slice(0,this.state.currentSection).map((section,idx)=>
-                                    (<div className="section-title pre-content link-title" onClick={that._handleClick.bind(this,idx)}>            
+                                    (<div key={idx} className="section-title pre-content link-title" onClick={that._handleClick.bind(this,idx)}>            
                                         {section.title.toUpperCase()}
                                         <br/>
                                         {/*<button 
@@ -214,7 +212,7 @@ class AboutMe extends Component {
                         {this.state.currentSection >= 0 && this.state.currentSection < content.length - 1 ? 
                              (<div className="post-content-section">
                                 {content.slice(this.state.currentSection+1,content.length).map((section,idx)=>
-                                    (<div className="section-title post-content link-title" onClick={that._handleClick.bind(this,idx+this.state.currentSection+1)}>            
+                                    (<div key={idx} className="section-title post-content link-title" onClick={that._handleClick.bind(this,idx+this.state.currentSection+1)}>            
                                         {section.title.toUpperCase()}
                                         <br/>
                                         {/*<button 
@@ -230,7 +228,7 @@ class AboutMe extends Component {
                              (<div className="collapsed-content-section">
                                 <br/>
                                 {content.map((section,idx)=>
-                                    (<div key={section.tiitle} className="section-title collapsed-content link-title" onClick={that._handleClick.bind(this,idx)}>            
+                                    (<div key={section.title} className="section-title collapsed-content link-title" onClick={that._handleClick.bind(this,idx)}>            
                                         {section.title.toUpperCase()}
                                         <br/>
                                         {/*<button 

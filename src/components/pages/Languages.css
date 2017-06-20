@@ -15,3 +15,7 @@ li {
 .logo > img {
     height: 3vw;
 }
+
+.logo-name {
+    font-size: 1.5vw;
+}

@@ -101,11 +101,23 @@ i {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    animation-name: App-bar-slide;
+    animation-name: App-bar-slide-in;
     animation-duration: 2s;
 }
 
-@keyframes App-bar-slide {
+.App-bar-slide-out {
+    margin-left: -2.9vw;
+    width: 52.53vw;   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    animation-name: App-bar-slide-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    /*margin-top: -50vw;*/
+}
+
+@keyframes App-bar-slide-in {
     0% {
         margin-top:-50vw;
     }
@@ -116,6 +128,18 @@ i {
     
     100% {
         
+    }
+}
+
+@keyframes App-bar-slide-out {
+    0% {
+        
+    }
+
+    100% {
+        /*margin-top: -100vw;*/
+        /*opacity: 0;*/
+        margin-left: 70vw;
     }
 }
 

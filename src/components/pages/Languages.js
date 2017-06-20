@@ -12,7 +12,6 @@ class Languages extends Component {
     }
     
     _handleClick = (buttonIdx) => {
-        console.log("clicked", buttonIdx)
         this.setState({
             currentSection: buttonIdx
         })
@@ -35,10 +34,10 @@ class Languages extends Component {
                     title: "Front-End",
                     tasks: ["HTML5", "CSS3", "JavaScript", 
                                 "React", "jQuery", "Bootstrap", 
-                                "Pug (Jade)"],
-                    logos: ["http://i.imgur.com/S86St7t.png", "http://i.imgur.com/6K4n6v6.png", "http://i.imgur.com/TQvHLDx.png",
+                                "Pug (Jade)", "Aurelia"],
+                    logos: ["http://i.imgur.com/S86St7t.png", "http://i.imgur.com/0eiGxEY.png", "http://i.imgur.com/TQvHLDx.png",
                                 "http://i.imgur.com/WcaYSTT.png", "http://i.imgur.com/jEvTNpw.png", "http://i.imgur.com/ublBAiN.png",
-                                "http://i.imgur.com/0qdCGNs.png"]
+                                "http://i.imgur.com/0qdCGNs.png", "http://i.imgur.com/nTtEbHD.png"]
                 },
                 {
                     title: "Back-End",
@@ -49,8 +48,9 @@ class Languages extends Component {
                 },
                 {
                     title: "Tooling",
-                    tasks: ["Git", "GitHub", "Webpack", "Babel"],
-                    logos: ["http://i.imgur.com/6z35yxp.png", "http://i.imgur.com/fD8ShPU.png", "http://i.imgur.com/S5PFBmC.png",
+                    tasks: ["Git", "GitHub", "Webpack", 
+                                "Babel"],
+                    logos: ["http://i.imgur.com/6z35yxp.png", "http://i.imgur.com/fD8ShPU.png", "http://i.imgur.com/MERKgJG.png",
                                 "http://i.imgur.com/zQi8gvJ.png"]
                 }
             ]
@@ -97,7 +97,7 @@ class Languages extends Component {
                         {this.state.currentSection > 0 ? 
                             (<div className="pre-content-section">
                                 {content.slice(0,this.state.currentSection).map((section,idx)=>
-                                    (<div className="section-title pre-content link-title" onClick={that._handleClick.bind(this,idx)}>            
+                                    (<div key={idx} className="section-title pre-content link-title" onClick={that._handleClick.bind(this,idx)}>            
                                         {section.title.toUpperCase()}
                                         <br/>
                                         <hr/>
@@ -110,9 +110,9 @@ class Languages extends Component {
                                 <div className="section-title">
                                     {content[this.state.currentSection].title.toUpperCase()}
                                     {content[this.state.currentSection].entries.map(entry=>
-                                        (<div>
+                                        (<div key={entry.title}>
                                             {entry.logos ?
-                                            (<div key={entry.title} className="section-entry">
+                                            (<div className="section-entry">
                                                 <span className="entry-title">{entry.title}</span>
                                                 <ul>
                                                 {entry.tasks.map((task,idx)=>
@@ -120,7 +120,7 @@ class Languages extends Component {
                                                         <div className="logo">
                                                             <img src={entry.logos[idx]} alt="logo"/>
                                                         </div>
-                                                        {task}
+                                                        <span className="logo-name">{task}</span>
                                                     </li>)
                                                 )}
                                                 </ul>
@@ -150,7 +150,7 @@ class Languages extends Component {
                         {this.state.currentSection >= 0 && this.state.currentSection < content.length - 1 ? 
                              (<div className="post-content-section">
                                 {content.slice(this.state.currentSection+1,content.length).map((section,idx)=>
-                                    (<div className="section-title post-content link-title" onClick={that._handleClick.bind(this,idx+this.state.currentSection+1)}>            
+                                    (<div key={idx} className="section-title post-content link-title" onClick={that._handleClick.bind(this,idx+this.state.currentSection+1)}>            
                                         {section.title.toUpperCase()}
                                         <br/>
                                         <hr/>
@@ -162,7 +162,7 @@ class Languages extends Component {
                              (<div className="collapsed-content-section">
                                 <br/>
                                 {content.map((section,idx)=>
-                                    (<div key={section.tiitle} className="section-title collapsed-content link-title" onClick={that._handleClick.bind(this,idx)}>            
+                                    (<div key={section.title} className="section-title collapsed-content link-title" onClick={that._handleClick.bind(this,idx)}>            
                                         {section.title.toUpperCase()}
                                         <br/>
                                         <hr/>

@@ -50,8 +50,7 @@ class App extends Component {
                             </a>
                         </div>
                     </div>
-                    {this.state.onHomepage ? 
-                    <div className="App-bar">
+                    <div className={this.state.onHomepage ? "App-bar" : "App-bar-slide-out"}>
                         <div className="Main-buttons">
                             <div className="Main-button-1">
                                 <Link to="/aboutme" className="top-button button-1">
@@ -91,7 +90,6 @@ class App extends Component {
                             
                         </div>
                     </div>
-                    : null}
                 </div>
                 <div>
                     {React.cloneElement(this.props.children, {onHomepage: this.onHomepage})}
